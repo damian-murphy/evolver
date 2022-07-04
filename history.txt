@@ -1,0 +1,80 @@
+History of changes made to the code for evolver.
+Probably missed some changes, can't remember the dates exactly,
+most of this was written late at night with a deadline fast approaching!
+
+Damian Murphy (murf),
+March 2003.
+
+v0.7.1
+Fix initial start city. All functions changed to reflect this.
+
+v0.7
+Renamed mutation to inversion. Implemented swap- and point- mutation.
+
+v0.6
+GaPlots created.
+
+v0.2.6.1
+Old code, forked and brought more up to date to check cyclic behaviour.
+Abandoned again when i realise it's just doing a semi-random walk throught the search space.
+
+v0.5.3
+No CleanUp. Gives invalid tours a poor fitness.
+If a same city is reached again in a tour, add double the distance to the fitness.
+
+v0.5.2
+No CleanUp. Gives invalid tours a fitness of MAX_DOUBLE instead.
+GA seems to spend all it's time in the wilderness, never getting a valid tour. Chromosomes seem to
+homogenise also... why?
+
+
+v0.5.1
+10 Feb 2002
+Round-trip TSP with CleanUp. Mutation is an inversion operator.
+Single-point crossover.
+
+v0.5
+Feb 2002?
+non-round trip TSP.
+
+v0.4
+Jan/Feb 2002?
+Added code to track the ages of individuals.
+Doesn't seem to work too well, abandoned again.
+Improved all functions again - esp. cleanup & inversion - problems here!
+Added code to allow selection of operators & whether to use swing window.
+These must be specified by consts at compile time.
+will do for now.
+
+v0.3
+Jan 2002?
+Added no_crossover() function, to transfer parents & children into nex_gen array in correct positions.
+This was (and is) done by the crossover() function.
+Now we can skip crossover if we wish!
+Added code to print best_so_far in numerical order & get length to make it easier to check for errors.
+Fixed cleanup, mutation...
+
+v0.2
+Jan 20002?
+Getting to a solution!
+Now doing TSPLIB berlin52 problem.
+fitness function changed to reflect this. Now getting distances.
+CleanUp introduced.
+TSPReader.java created.
+
+
+v0.1.9
+20th Dec 2002
+Implemented mutation as the inversion operator - takes a subset of the tour and reverses it.
+Parameters for rates, popsize, etc. on command-line.
+Created Display.java - a java swing window showing what's happening.
+
+v0.1
+Early Dec. 2002. 18th?
+First version.
+No mutation implemented.
+Not doing TSP yet.
+Tries to get max( sum genes ) -> e.g. 10 cities, so max is 10*9 = 90, i.e. 9:9:9:9:9:9:9:9:9:9 = chromosome.
+
+
+
